@@ -1,0 +1,7 @@
+﻿<#@ include file="ProcessTemplate.tt" #>
+
+<#
+System.Diagnostics.Debugger.Launch();
+    ProcessTemplate("Standalone1.tt", "StandaloneOutput1.txt");
+    ProcessTemplate("Standalone2.tt", "StandaloneOutput2.txt");
+#>

@@ -1,0 +1,11 @@
+﻿<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ include file="ProcessTemplate.tt" #>
+<#
+//System.Diagnostics.Debugger.Launch();
+
+	CallContext.SetData("StandaloneParam1.Parameter", "Value 1");
+    ProcessTemplate("StandaloneParam1.tt", "StandaloneParamOutput1.txt");
+
+	CallContext.SetData("StandaloneParam2.Parameter", "Value 2");
+    ProcessTemplate("StandaloneParam2.tt", "StandaloneParamOutput2.txt");
+#>

@@ -1,0 +1,24 @@
+﻿<#@ include file="SaveOutput.tt" #>
+<#
+//System.Diagnostics.Debugger.Launch();
+    GenerateFile1();
+    SaveOutput("File1.txt");  
+
+    GenerateFile2();
+    SaveOutput("File2.txt");
+#>
+<#+
+    void GenerateFile1()
+    {
+#>
+This is file 1
+<#+
+    }  
+
+    void GenerateFile2()
+    {
+#>
+This is file 2
+<#+
+    }
+#>

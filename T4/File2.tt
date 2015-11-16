@@ -1,0 +1,8 @@
+﻿<#+
+    void GenerateFile2(string param)
+    {
+#>
+This is file 2, <#= param #>
+<#+
+    }  
+#>

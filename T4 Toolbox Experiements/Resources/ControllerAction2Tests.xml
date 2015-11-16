@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controller name="Controller2">
+  <Action name="Action1">
+    <HappyPaths>
+      <Path name="SUPCanAssignCaseStatus">
+        <Setups>
+          <Setup name="Requestor">SUPLogonName</Setup>
+          <Setup name="CaseNumber">13579</Setup>
+          <Setup name="CaseStatus">PA</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="ReponseCode">00-00000</Expect>
+        </Expects>
+      </Path>
+      <Path name="ISVCanAssignCaseStatus">
+        <Setups>
+          <Setup name="Requestor">ISVLogonName</Setup>
+          <Setup name="CaseNumber">24680</Setup>
+          <Setup name="CaseStatus">PA</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="ReponseCode">00-00000</Expect>
+        </Expects>
+      </Path>
+    </HappyPaths>
+    <ErrorPaths>
+      <Path name="NullCaseStatus">
+        <Setups>
+          <Setup name="Requestor">SUPLogonName</Setup>
+          <Setup name="CaseNumber">13579</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="ReponseCode">00-00000</Expect>
+        </Expects>
+      </Path>
+      <Path name="NullCaseNumber">
+        <Setups>
+          <Setup name="Requestor">ISVLogonName</Setup>
+          <Setup name="CaseStatus">PA</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="ReponseCode">00-00000</Expect>
+        </Expects>
+      </Path>
+    </ErrorPaths>
+  </Action>
+</Controller>

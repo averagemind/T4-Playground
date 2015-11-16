@@ -1,0 +1,8 @@
+G:\Sandboxes\T4\T4\bin\Debug\T4.exe.config
+G:\Sandboxes\T4\T4\bin\Debug\T4.exe
+G:\Sandboxes\T4\T4\bin\Debug\T4.pdb
+G:\Sandboxes\T4\T4\obj\Debug\T4.csprojResolveAssemblyReference.cache
+G:\Sandboxes\T4\T4\obj\Debug\T4.exe
+G:\Sandboxes\T4\T4\obj\Debug\T4.pdb
+G:\Sandboxes\T4\T4\bin\Debug\Extensions.dll
+G:\Sandboxes\T4\T4\bin\Debug\Extensions.pdb

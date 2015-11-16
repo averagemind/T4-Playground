@@ -1,0 +1,18 @@
+﻿<#@ output extension="\\" #>
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+<#@ include file="MultiOutput.tt" #>
+<#
+//System.Diagnostics.Debugger.Launch();
+
+	CallContext.SetData("StandaloneParam1.Parameter", "Value 11");
+    ProcessTemplate("StandaloneParam1.tt", "StandaloneParamOutput1.txt");
+
+	CallContext.SetData("StandaloneParam2.Parameter", "Value 2");
+    ProcessTemplate("StandaloneParam2.tt", "StandaloneParamOutput2.txt");
+
+	CallContext.SetData("StandaloneParam1.Parameter", "Value 3");
+    ProcessTemplate("StandaloneParam1.tt", "StandaloneParamOutput3.txt");
+
+	DeleteOldOutputs();
+
+#>

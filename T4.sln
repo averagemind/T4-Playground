@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4", "T4\T4.csproj", "{EFA8A662-B707-473B-BDE9-978434AD2610}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4 Toolbox Experiements", "T4 Toolbox Experiements\T4 Toolbox Experiements.csproj", "{D1997981-EA98-48A3-AB47-8FCA71A510B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{6D9E09D8-C59C-4C62-A866-26267AC0DF2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFA8A662-B707-473B-BDE9-978434AD2610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA8A662-B707-473B-BDE9-978434AD2610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA8A662-B707-473B-BDE9-978434AD2610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA8A662-B707-473B-BDE9-978434AD2610}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1997981-EA98-48A3-AB47-8FCA71A510B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1997981-EA98-48A3-AB47-8FCA71A510B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1997981-EA98-48A3-AB47-8FCA71A510B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1997981-EA98-48A3-AB47-8FCA71A510B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D9E09D8-C59C-4C62-A866-26267AC0DF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9E09D8-C59C-4C62-A866-26267AC0DF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9E09D8-C59C-4C62-A866-26267AC0DF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9E09D8-C59C-4C62-A866-26267AC0DF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

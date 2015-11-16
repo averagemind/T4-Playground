@@ -1,0 +1,4 @@
+G:\Sandboxes\T4\Extensions\bin\Debug\Extensions.dll
+G:\Sandboxes\T4\Extensions\bin\Debug\Extensions.pdb
+G:\Sandboxes\T4\Extensions\obj\Debug\Extensions.dll
+G:\Sandboxes\T4\Extensions\obj\Debug\Extensions.pdb

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Controller name="Controller1">
+  <Action name="Action1">
+    <HappyPaths>
+      <Path name="HPath1">
+        <Setups>
+          <Setup name="InputParamName1">A</Setup>
+          <Setup name="InputParamName2">1</Setup>
+          <Setup name="InputParamName3">NULL</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">OA</Expect>
+          <Expect name="OutputParamName2">OB</Expect>
+        </Expects>
+      </Path>
+      <Path name="HPath2">
+        <Setups>
+          <Setup name="InputParamName1">B</Setup>
+          <Setup name="InputParamName2">2</Setup>
+          <Setup name="InputParamName3">C</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">OA</Expect>
+          <Expect name="OutputParamName2">OB</Expect>
+        </Expects>
+      </Path>
+    </HappyPaths>
+    <ErrorPaths>
+      <Path name="EPath1">
+        <Setups>
+          <Setup name="InputParamName1">EA</Setup>
+          <Setup name="InputParamName2">11</Setup>
+          <Setup name="InputParamName3">NULL</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">EOA</Expect>
+          <Expect name="OutputParamName2">EOB</Expect>
+        </Expects>
+      </Path>
+      <Path name="EPath2">
+        <Setups>
+          <Setup name="InputParamName1">EB</Setup>
+          <Setup name="InputParamName2">22</Setup>
+          <Setup name="InputParamName3">EC</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">EOA</Expect>
+          <Expect name="OutputParamName2">EOB</Expect>
+        </Expects>
+      </Path>
+    </ErrorPaths>
+  </Action>
+  <Action name="Action2">
+    <HappyPaths>
+      <Path name="HPath1">
+        <Setups>
+          <Setup name="InputParamName1">A</Setup>
+          <Setup name="InputParamName3">NULL</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">OA</Expect>
+        </Expects>
+      </Path>
+    </HappyPaths>
+    <ErrorPaths>
+      <Path name="EPath1">
+        <Setups>
+          <Setup name="InputParamName1">EA</Setup>
+          <Setup name="InputParamName3">NULL</Setup>
+        </Setups>
+        <Expects>
+          <Expect name="OutputParamName1">EOA</Expect>
+        </Expects>
+      </Path>
+    </ErrorPaths>
+  </Action>
+</Controller>

@@ -1,0 +1,10 @@
+﻿<#@ template language="C#" #>
+<#@ output extension=".txt" #>
+<#@ import namespace="System.Runtime.Remoting.Messaging" #>
+This is file 1 <#= Parameter #>
+<#+
+    string Parameter
+    {
+        get { return (string)CallContext.GetData("StandaloneParam1.Parameter"); }
+    }
+#>

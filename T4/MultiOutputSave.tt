@@ -1,0 +1,15 @@
+﻿<#@ output extension="txt" #>
+<#@ include file="MultiOutput.tt" #>
+<#@ include file="File1.tt" #>
+<#@ include file="File2.tt" #>
+<#
+	//System.Diagnostics.Debugger.Launch();
+
+    GenerateFile1("Param 1");
+    SaveOutput("File1.txt");  
+
+    GenerateFile2("Param 2");
+    SaveOutput("File2.txt");
+
+	DeleteOldOutputs();
+#>

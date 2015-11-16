@@ -1,0 +1,80 @@
+﻿<#@ template language="C#" hostspecific="True" debug="True" #>
+<#@ include file="CodeTemplates\Manager.ttinclude" once="True" #>
+
+<# var manager = Manager.Create(Host, GenerationEnvironment); #>
+
+<# manager.StartNewFile("ControllerActionTests.generated.cs"); #>
+<# manager.StartHeader(); #>
+<#
+//System.Diagnostics.Debugger.Launch();
+var path=Host.ResolvePath("");
+IterateDirectories(new DirectoryInfo(path));
+#>
+<# manager.EndBlock(); #>
+
+<# manager.Process(true); #>
+
+
+<#+
+    void IterateDirectories(DirectoryInfo dir)
+    {
+        Array.ForEach(dir.GetFiles("*Tests.xml"), GenerateTests);
+        Array.ForEach(dir.GetDirectories(), IterateDirectories);
+    }
+
+    void GenerateTests(FileInfo file)
+    {
+        var xmlDoc = XDocument.Load(file.FullName);
+        var tests = xmlDoc.Descendants().Where(x => x.Name == "Path").ToList();
+#>
+
+//test
+
+<#+
+    }
+#>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#>
+
+		[TestMethod]
+		public void <#=testMethodName#>()
+		{
+			var request = new <#=testMethodName#>Request
+			{
+<#
+				foreach (var inputParam in inputParams)
+				{
+#>
+				<#=inputParam.Attribute("name").Value#> = "<#=inputParam.Value#>",
+<#
+				}
+#>
+			};
+			var response = new <#=testMethodName#>Response
+			{
+<#
+				foreach (var outputParam in outputParams)
+				{
+#>
+				<#=outputParam.Attribute("name").Value#> = "<#=outputParam.Value#>",
+<#
+				}
+#>
+			};
+		}
+<#

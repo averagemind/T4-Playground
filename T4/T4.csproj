@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFA8A662-B707-473B-BDE9-978434AD2610}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>T4</RootNamespace>
+    <AssemblyName>T4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Example2.cs">
+      <DependentUpon>Example2.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Example1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Example1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="File2.cs">
+      <DependentUpon>File2.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="File1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>File1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MultiOutput.cs">
+      <DependentUpon>MultiOutput.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ProcessTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcessTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveOutput.cs">
+      <DependentUpon>SaveOutput.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="MultiOutputProcessTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiOutputProcessTemplate.txt</LastGenOutput>
+    </None>
+    <None Include="MultiOutputSave.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiOutputSave.txt</LastGenOutput>
+    </None>
+    <None Include="Example3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Example3.txt</LastGenOutput>
+    </None>
+    <None Include="Example2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Example2.cs</LastGenOutput>
+    </None>
+    <None Include="Example1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Example1.cs</LastGenOutput>
+    </None>
+    <None Include="File2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>File2.cs</LastGenOutput>
+    </None>
+    <None Include="File1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>File1.cs</LastGenOutput>
+    </None>
+    <None Include="MultiOutput.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiOutput.cs</LastGenOutput>
+    </None>
+    <None Include="ProcessTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ProcessTemplate.cs</LastGenOutput>
+    </None>
+    <None Include="Example4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Example4.txt</LastGenOutput>
+    </None>
+    <None Include="SaveOutput.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SaveOutput.cs</LastGenOutput>
+    </None>
+    <None Include="StandaloneParam2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StandaloneParam2.txt</LastGenOutput>
+    </None>
+    <None Include="StandaloneParam1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StandaloneParam1.txt</LastGenOutput>
+    </None>
+    <None Include="Standalone2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Standalone2.txt</LastGenOutput>
+    </None>
+    <None Include="Standalone1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Standalone1.txt</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Example4.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Example4.tt</DependentUpon>
+    </Content>
+    <Content Include="Example3.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Example3.tt</DependentUpon>
+    </Content>
+    <Content Include="File1.txt">
+      <DependentUpon>MultiOutputSave.tt</DependentUpon>
+    </Content>
+    <Content Include="File2.txt">
+      <DependentUpon>MultiOutputSave.tt</DependentUpon>
+    </Content>
+    <Content Include="MultiOutputProcessTemplate.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiOutputProcessTemplate.tt</DependentUpon>
+    </Content>
+    <Content Include="MultiOutputSave.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiOutputSave.tt</DependentUpon>
+    </Content>
+    <Content Include="StandaloneParam2.txt">
+      <DependentUpon>StandaloneParam2.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="StandaloneParam1.txt">
+      <DependentUpon>StandaloneParam1.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="Standalone2.txt">
+      <DependentUpon>Standalone2.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Content>
+    <Content Include="Standalone1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Standalone1.tt</DependentUpon>
+    </Content>
+    <Content Include="StandaloneParamOutput1.txt">
+      <DependentUpon>MultiOutputProcessTemplate.tt</DependentUpon>
+    </Content>
+    <Content Include="StandaloneParamOutput2.txt">
+      <DependentUpon>MultiOutputProcessTemplate.tt</DependentUpon>
+    </Content>
+    <Content Include="StandaloneParamOutput3.txt">
+      <DependentUpon>MultiOutputProcessTemplate.tt</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Extensions\Extensions.csproj">
+      <Project>{6d9e09d8-c59c-4c62-a866-26267ac0df2a}</Project>
+      <Name>Extensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
