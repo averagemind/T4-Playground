@@ -58,6 +58,28 @@ namespace T4_Toolbox_Experiements
 		[TestMethod]
 		public void <#=testMethodName#>()
 		{
+			var request = new <#=testMethodName#>Request
+			{
+<#
+				foreach (var inputParam in inputParams)
+				{
+#>
+				<#=inputParam.Attribute("name").Value#> = "<#=inputParam.Value#>",
+<#
+				}
+#>
+			};
+			var response = new <#=testMethodName#>Response
+			{
+<#
+				foreach (var outputParam in outputParams)
+				{
+#>
+				<#=outputParam.Attribute("name").Value#> = "<#=outputParam.Value#>",
+<#
+				}
+#>
+			};
 		}
 <#
             }
